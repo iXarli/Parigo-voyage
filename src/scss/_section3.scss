@@ -1,0 +1,38 @@
+// ************************************SECTION 3
+
+.sect3-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.image-block {
+  flex-basis: 100%;
+  text-align: center;
+}
+.list-block {
+  margin-top: 50px;
+}
+
+.sect3-img-title__left {
+  flex-basis: 100%;
+  text-align: center;
+}
+.sect3-img-title__right {
+  margin-top: 50px;
+}
+.list-block__item {
+  @extend %font-sn;
+  font-size: 16px;
+  .fa-check {
+    font-size: 25px;
+    color: $putty;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover .fa-check {
+    animation: check-flash 1s ease-in-out;
+  }
+
+}

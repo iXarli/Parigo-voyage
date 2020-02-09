@@ -1,0 +1,98 @@
+// ***************************************** SECTION 4 *****************************************
+.sect4 {
+  margin-top: 82px;
+}
+.sect4-wrap,
+.sect4-table__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sect4-block {
+  flex-basis: 45%;
+}
+.sect4__title {
+  position: relative;
+  @extend %font-sn;
+  font-size: 27px;
+  font-weight: bold;
+  padding-left: 25px;
+  width: 60%;
+  min-width: 310px;
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 1.5%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  &::before {
+    background-color: $putty;
+  }
+  &::after {
+    background-color: $blueGray;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: all .5s linear;
+  }
+  &:hover::after {
+    transform: scaleY(1);
+  }
+}
+.sect4__title_left {
+  width: 74.5%;
+}
+.sect4__content {
+  margin-top: 25px;
+}
+.sect4__text_left {
+  text-align: justify;
+  margin: 25px 0;
+}
+.sect4__text_right {
+  margin: 12.5px 0;
+}
+.sect4__image {
+  border-radius: 5px;
+}
+.sect4__image_left {
+  background: url('../images/pict/transfer-car.jpg') no-repeat center center / cover;
+  height: 250px;
+}
+.sect4__image_right {
+  background: url('../images/pict/advantages-and-people.jpg') no-repeat center center / cover;
+  height: 150px;
+}
+.sect4-table {
+  border: 1px solid $sharcoal;
+}
+.sect4-table__row {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid $sharcoal;
+  &:last-child {
+    border: none;
+  }
+  &:hover .sect4-table__icon {
+    color: $blueGray;
+  }
+}
+.sect4-table__title,
+.sect4-table__icon {
+  padding: 12px;
+}
+.sect4-table__icon {
+  @extend %flx-sec-center;
+  border-right: 1px solid $sharcoal;
+  align-items: center;
+  color: $putty;
+  font-size: 23px;
+}
+
+.sect4-table__title {
+  font-size: 14.5px;
+}
+// ***************************************** SECTION 4 END *****************************************

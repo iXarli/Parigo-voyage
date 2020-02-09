@@ -1,0 +1,175 @@
+// *********************** FOOTER ***********************
+
+.footer-title-block {
+  @extend %flx-sec-center;
+  overflow: hidden;
+  margin-top: 32px;
+}
+.footer-title__text {
+  position: relative;
+  @extend %font-sn;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: $putty;
+  margin: 0 0 25px 0;
+  &::before,
+  &::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
+    transition: all .5s linear;
+  }
+  &::before {
+    transform: scale(-1.1);
+    left: -56%;
+  }
+  &::after {
+    right: -56%;
+  }
+  &:hover::before {
+    left: -1%;
+  }
+  &:hover::after {
+    right: -1%;
+  }
+}
+// footer block top
+
+.main-footer__block_top {
+  position: relative;
+  background: $putty ;
+  color: $white;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $white;
+    left: 50%;
+    top: -7px;
+    transform-origin: left top;
+    transform: rotate(-45deg) translateX(-50%);
+  }
+}
+
+// footer block top end
+
+//footer block bottom
+
+.main-footer__block_bottom {
+  position: relative;
+  background: $blueGray ;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: $white url("../images/logotype/logotype-pv-footer.svg") no-repeat center center / 45px;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+}
+
+//footer block bottom end
+.main-footer__content,
+.footer-copyright{
+  padding: 50px 0;
+  text-align: center;
+}
+.main-footer__content_top {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  p {
+    margin: 15px;
+  }
+}
+.main-footer__content_bottom {
+  @extend %flx-sec;
+  align-items: center;
+}
+
+.footer-address {
+  flex-basis: 33.3%;
+}
+
+.footer-address__text {
+  margin-bottom: 15px;
+  color: $white;
+}
+
+.footer-menu-wrap {
+  flex-basis: 33.3%;
+}
+
+.footer-menu__list {
+  width: 50%;
+  margin: 0 auto;
+  border-top: 1px dotted $white;
+  border-left: 1px dotted $white;
+  border-right: 1px dotted $white;
+}
+
+.footer-menu__link {
+  padding: 15px 0;
+  display: block;
+  border-bottom: 1px dotted $white;
+  box-sizing: border-box;
+  height: 50.99px;
+  &:hover {
+    background-color: lighten($blueGray, 5%);
+    font-size: 15px;
+    color: darken($white, 3%);
+  }
+}
+
+.footer-col {
+  flex-basis: 33.3%;
+}
+
+.footer-col__tel {
+  color: $white;
+  text-align: left;
+  padding-left: 25%;
+}
+
+.contact-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.footer-col__social {
+  @extend %flx-sec;
+  width: 45%;
+  font-size: 25px;
+  margin: 50px auto 0 auto;
+}
+.footer__social--button {
+  display: block;
+}
+
+.footer-copyright {
+  position: relative;
+  background: $white;
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background: linear-gradient(-45deg,$white 10px,transparent 0),linear-gradient(45deg,$white 10px,transparent 0);
+    background-size: 20px;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+
+  }
+}
+// *********************** FOOTER END ***********************

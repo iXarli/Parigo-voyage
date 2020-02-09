@@ -1,0 +1,30 @@
+
+// Scroll progres bar
+
+.scroll-progres {
+  background-color: rgba(255, 255, 255, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 5;
+}
+
+.scroll-progres__line {
+  background-color: $blueGray;
+  width: 0;
+  height: 100%;
+}
+
+.scroll-progres__time { //value
+  position: absolute;
+  top: 7px;
+  right: 1%;
+  @extend %font-sn;
+  color: $white;
+  font-size: 10px;
+
+}
+
+// Scroll progres END

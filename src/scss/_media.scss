@@ -1,0 +1,494 @@
+
+@media only screen and (max-width: 1366px) {
+
+  .top-header {
+    padding-top: 88px;
+  }
+  .header-description {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .header-description__title  {
+    max-width: 926px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1140px) {
+  // header
+  .top-header {
+    padding-top: 120px;
+  }
+  .nav-wrap {
+    margin-top: 5px;
+    justify-content: space-between;
+    flex-basis: 250px;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: $blueGray;
+    overflow: hidden;
+    transition: right .5s ease-in-out;
+    z-index: 6;
+  }
+
+  .nav-menu__list-mobile {
+    position: fixed;
+    right: 0 !important;
+    .nav-menu__items {
+      border: none;
+    }
+  }
+
+  .nav-menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    margin-top: 25px;
+    li {
+      flex-basis: 100%;
+      border-right: 0;
+    }
+    a {
+      font-size: 23px;
+      text-align: left;
+      &:hover {
+        animation: none;
+      }
+    }
+  }
+  .nav-menu__items {
+    flex-basis: 100%;
+  }
+
+  .nav-menu__link {
+    padding: 15px 0;
+    font-size: 32px;
+  }
+
+  .menu-item {
+    &:hover .sub-menu {
+      height: 100%;
+    }
+    a {
+      &::before, &::after {
+        display: none;
+      }
+    }
+  }
+
+  .sub-menu {
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top: none;
+    a {
+      padding-left: 65px;
+      text-align: left;
+      font-size: 19px;
+    }
+  }
+
+  .button-minmenu {
+    display: flex;
+  }
+  .button-minmenu {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 7px;
+    border-radius: 50%;
+  }
+  //header description
+  .header-wrap-desc {
+    text-align: center;
+  }
+  .header-description__subtitle {
+    margin-bottom: 10px;
+  }
+  .sect1-descr_top {
+    width: 80%;
+    margin: 100px auto 100px auto;
+  }
+  .sect1-title_left {
+    order: 1;
+  }
+  .sect1-img_center {
+    order: 2;
+  }
+  .image-alf {
+    width: 70%;
+  }
+  .sect1-title_right {
+    order: 3;
+  }
+  .sect3-img-title {
+    justify-content: center;
+  }
+  .sect4__title,
+  .section-title{
+    font-size: 18px;
+  }
+  .sect4__image_left {
+    height: 160px;
+  }
+  .bottom-title {
+    flex-basis: 80%;
+  }
+  .wrapper-min {
+    width: 95%;
+  }
+  .table-wrap {
+    width: 100%;
+  }
+  .footer-title__text {
+    font-size: 18px;
+    &::before,
+    &::after {
+      width: 25%;
+    }
+    &::before {
+      left: -28%;
+    }
+    &::after {
+      right: -28%;
+    }
+  }
+  .input-inner {
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 1044px) {
+  .footer-address,
+  .footer-menu-wrap,
+  .footer-col{
+    flex-basis: 100%;
+  }
+  .footer-address {
+    order: 2;
+  }
+  .footer-menu-wrap {
+    margin-top: 35px;
+    order: 3;
+  }
+  .footer-col {
+    order: 1;
+  }
+  .footer-col__tel {
+    padding: 0;
+    text-align: center;
+  }
+  .footer-col__social {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .header-wrap-desc {
+    flex-wrap: wrap;
+    min-width: 300px;
+    margin: 84px auto 0 auto;
+  }
+  .header-description,
+  .header-description__subtitle,
+  .header-description__title{
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .sect4-block {
+    flex-basis: 100%;
+  }
+  .sect4__text_left {
+    font-size: 13px;
+  }
+  .sect4__title {
+    padding-left: 50px;
+    &::before,
+    &::after {
+      height: 5px;
+      width: 40px;
+      top: 43%;
+      z-index: 1;
+    }
+    &::after {
+      transform-origin: right center;
+      transform: scaleX(0);
+      z-index: 2;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      height: 5px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 670px) {
+
+  .top-header {
+    padding-top: 98px;
+  }
+  .header-wrap-desc {
+    margin-top: 86px;
+  }
+
+  .header-menu__min {
+    justify-content: center;
+  }
+
+  .logo-tel {
+    flex-basis: 100%;
+  }
+
+  .nav-wrap {
+    flex-basis: 100%;
+    padding-left: 6.5px;
+  }
+  .nav-wrap {
+    margin-top: 7px;
+  }
+
+  .animation-block {
+    left: -38px;
+    animation: wrap-social-mobile 20s ease-in 2s infinite;
+  }
+
+  //Forms
+  .form-modal__title {
+    font-size: 21px;
+  }
+  .form-modal__text {
+    font-size: 13px;
+    line-height: 14px;
+  }
+  .form-modal__input-text,
+  .input-inner_radio,
+  .input-inner_wrap {
+    height: 30px;
+    &::placeholder {
+      font-size: 11px;
+    }
+  }
+  .form-modal__comments {
+    height: 90px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+  .form-modal__button-inner {
+    &::after {
+      line-height: 30px;
+      font-size: 15px;
+    }
+  }
+  .form-modal__button {
+    height: 30px;
+  }
+  .multiple-items__block-wrap {
+    height: 87px;
+  }
+
+  //Header descriptions
+  .header-description__subtitle {
+    font-size: 37px;
+    line-height: 45px;
+    margin-bottom: 10px;
+  }
+  //Header content
+  .header-description__title {
+    font-size: 24px;
+  }
+  .header-services__title {
+    font-size: 21px;
+  }
+  .header-services__address {
+    font-size: 13px;
+  }
+  //Header content button
+  .header-services__button {
+    height: 36px;
+    font-size: 15px;
+    flex-basis: 250px;
+  }
+
+  #nav-menu__button {
+    height: 35px;
+    flex-basis: 147px;
+  }
+
+
+  //header button bottom
+  .header-down-wrap {
+    bottom: 0;
+  }
+  .down-link {
+    font-size: 32px;
+    transform: translateX(3px);
+  }
+  .icon-title {
+    font-size: 10px;
+  }
+
+  .image-block__img {
+    max-width: 132px;
+  }
+
+  .list-block__item,
+  .sect4__text_right{
+    font-size: 13px;
+  }
+
+
+  //table
+  //.table-block {
+  //  min-height: 45px;
+  //}
+  .table-block-icon__right {
+    width: 45px;
+  }
+  .table-block-icon__right {
+    span {
+      width: 50%;
+      left: calc(50% - 25% + .5px);
+    }
+  }
+  .table-block>span {
+    font-size: 13px;
+    font-weight: bold;
+    width: 190px;
+  }
+  .table-visible {
+    overflow-x: scroll;
+  }
+  .table-header_wrap {
+    height: 87px;
+    padding: 3px;
+  }
+  .table-header_img {
+    width: 96%;
+  }
+  .table-header:last-child, td {
+    font-size: 7px;
+    line-height: 7px;
+  }
+  //table
+  .table-header_img {
+    width: 88%;
+  }
+}
+//******************************************* Desctop End *******************************************
+
+//******************************************* Mobile *******************************************
+
+@media only screen and (max-width: 375px) {
+  .top-header {
+    padding-top: 130px;
+  }
+  .header-wrap-desc {
+    margin-top: 66px;
+  }
+  .header-description__title {
+    font-size: 23.5px;
+    margin: 5px 0;
+  }
+  .header-services__title {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+  .section-text {
+    width: 93%;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header-wrap-desc {
+    margin-top: 0;
+  }
+}
+
+// Height
+
+@media only screen and (max-height: 414px) {
+  .header-wrap-desc {
+    margin: 0px auto 0 auto;
+  }
+  .header-description {
+    flex-basis: 77%;
+    font-size: 9px;
+  }
+  .header-services {
+    margin-top: -18px;
+  }
+  .header-services__title {
+    font-size: 17px;
+    width: 100%;
+    margin-bottom: 9px;
+  }
+  .header-services__button {
+    width: 38%;
+    height: 28px;
+    font-size: 13px;
+  }
+  .header-services__address {
+    font: 12px Tahoma, sans-serif;
+  }
+  .down-link {
+    font-size: 31px;
+  }
+  .header-down-wrap {
+    left: 4px;
+    bottom: -5px;
+  }
+}
+
+@media only screen and (max-height: 375px) {
+  .header-wrap-desc {
+    margin: 30px auto 0 auto;
+  }
+  .header-description__title {
+    font-size: 20px;
+  }
+}
+
+// UNYSON
+
+//@media (max-width: 782px) {
+//  .fw-container {
+//    max-width: 750px;
+//  }
+//}
+//
+//@media (min-width: 783px) and (max-width: 900px) {
+//  .fw-container {
+//    max-width: 970px;
+//  }
+//}
+//
+//@media (min-width: 901px) and (max-width: 1199px) {
+//  .fw-container {
+//    max-width: 1170px;
+//  }
+//}
+//
+//@media (min-width: 1200px) {
+//  .fw-container {
+//    max-width: 1170px;
+//  }
+//}
+
+
+
+
+

@@ -1,0 +1,58 @@
+// ************************************SECTION 2
+
+.sect2 {
+  background-color: rgba(185, 243, 237, 0.199);
+  padding: 1px 0;
+}
+
+.sect2-descr {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-color: $putty;
+    width: 109px;
+    height: 1px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+  }
+}
+
+.icon-wrap {
+  flex-basis: 164.38px;
+  margin-bottom: 50px;
+}
+
+.sect2-descr-icons {
+  @extend %flx-sec;
+  text-align: center;
+  margin-top: 100px;
+  justify-content: center;
+  .fas, .far {
+    color: $putty;
+    font-size: 54px;
+  }
+}
+
+.icon-title {
+  margin-top: 22px;
+}
+
+.icon-drinks-img {
+  position: relative;
+
+  .fa-wifi {
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    right: 36px;
+    transform: rotate(18deg);
+  }
+}
+
+// ************************************SECTION 2 END

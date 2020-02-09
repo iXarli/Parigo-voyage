@@ -1,0 +1,511 @@
+// ***********************************HEADER***********************************
+
+.top-header {
+  position: relative;
+  @extend %font-sn;
+  background: $blueGray;
+  height: 96vh;
+  overflow: hidden;
+  color: $white;
+  padding-top: 150px;
+  box-sizing: border-box;
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(-45deg, $white 10px, transparent 0),
+    linear-gradient(45deg, $white 10px, transparent 0);
+    background-size: 20px 20px;
+    z-index: 3;
+  }
+}
+
+//*********************************HEADER OVERLAY******************************
+
+
+.header-overlay {
+  position: absolute;
+  background: radial-gradient(ellipse at center, rgba(0%, 0%, 0%, .4) 100%, rgba(0%, 0%, 0%, .7) 100%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header-wrap {
+  @extend %flx-sec;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  top: 35px;
+  left: 0;
+  z-index: 2;
+}
+
+// Logo header
+
+.logo-wrapper {
+  @extend %flx-sec;
+  flex-basis: 325px;
+
+  img {
+    width: 70px;
+  }
+}
+
+//************************************HEADER-VIDEO BG***************************************
+
+.homepage-hero-module {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+// ***********************************HEADER MENU************************************
+
+.header-menu_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.header-menu_shrink {
+  background: $putty;
+  #nav-menu__button {
+    background: teal;
+  }
+  .button-minmenu {
+    border-color: $white;
+  }
+  .button-minmenu__line {
+    background: $white;
+  }
+  .nav-menu__link {
+    &:before {
+      background: $white;
+    }
+    &:after {
+      background: #000000;
+      background: -moz-radial-gradient(top, ellipse cover,  #c3a974 21%, $white 21%);
+      background: -webkit-radial-gradient(top, ellipse cover,  #c3a974 21%,$white 21%);
+      background: radial-gradient(ellipse at top,  #c3a974 21%,$white 21%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3a974', endColorstr='$white',GradientType=1 );
+      width: 15px;
+    }
+  }
+}
+
+.header-menu__min {
+  @extend %flx-sec;
+  align-items: center;
+  padding: 13px 0;
+
+}
+
+.logo-tel {
+  @extend %flx-sec;
+  @extend %font-r;
+  align-items: center;
+}
+
+.header-menu__tel {
+  margin-left: 10px;
+}
+
+//telephone animation
+
+.tel-animation {
+  position: relative;
+}
+
+.animation-block {
+  position: absolute;
+  border: 1px solid $white;
+  overflow: hidden;
+  width: 28px;
+  height: 28px;
+  right: -31px;
+  top: -8px;
+  transform: rotate(-45deg) scale(0);
+  border-radius: 50%;
+  opacity: 0;
+  animation: wrap-social 20s ease-in 2s infinite ;
+}
+
+.animation-block__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%) scale(0) rotate(45deg);
+  font-size: 18px;
+  opacity: 0;
+}
+
+.animation-block__icon:nth-child(1) {
+  animation: icons-social1 20s ease-in 2s infinite;
+}
+.animation-block__icon:nth-child(2) {
+  animation: icons-social2 20s ease-in 2s infinite;
+}
+.animation-block__icon:nth-child(3) {
+  animation: icons-social3 20s ease-in 2s infinite;
+}
+
+
+
+.nav-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-menu__list {
+  @extend %flx-sec;
+  margin-right: 15px;
+  li {
+    position: relative;
+    border-right: 1px solid $white;
+    //border-bottom: 35px solid transparent;
+    &:last-child {
+      border: 0;
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 0 13px;
+    font-size: 16px;
+    transform-origin: center 50px;
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      background: $putty;
+      width: 100%;
+      height: 3px;
+      transform-origin: center center;
+      transform: scaleX(0);
+      transition: all .3s linear .3s;
+    }
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      bottom: -15px;
+      opacity: 0;
+      visibility: hidden;
+      right: 0;
+      transform: translateX(-50%) rotate(-720deg);
+      transform-origin: center center;
+      background: #000000;
+      background: -moz-radial-gradient(top, ellipse cover,  $white 21%, #c3a974 21%);
+      background: -webkit-radial-gradient(top, ellipse cover,  $white 21%,#c3a974 21%);
+      background: radial-gradient(ellipse at top,  $white 21%,#c3a974 21%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='#c3a974',GradientType=1 );
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: all .3s linear;
+    }
+    &:hover {
+      animation: menu-swing .3s ease-in .6s;
+    }
+    &:hover::before {
+      transform: scaleX(.8);
+      transition: all .3s linear;
+    }
+    &:hover::after {
+      right: 50%;
+      transform: translateX(50%) rotate(0deg);
+      transform-origin: center center;
+      opacity: 1;
+      visibility: visible;
+      animation: cercle-rotate .5s linear .9s infinite;
+      transition: all .3s linear .3s;
+    }
+  }
+  //&:hover .nav-menu__list-drop {
+  //  display: block;
+  //}
+}
+
+// Выпадающее меню
+.menu-item {
+  position: relative;
+  &:hover .sub-menu {
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+.sub-menu {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  top: 21px;
+  box-sizing: content-box;
+  border-top: 37px solid transparent;
+  opacity: 0;
+  min-width: 150px;
+  height: 0;
+  border-radius: 5px;
+  //overflow: hidden;
+  transform: scaleY(0);
+  transition: all .7s;
+  &:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $blueGray;
+    border-left: 10px solid transparent;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+  }
+  .menu-item {
+    background: $blueGray;
+    border-bottom: 1px solid $white;
+    border-right: 0;
+    overflow: hidden;
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  a {
+    text-align: left;
+    padding: 10px;
+    &::before, &::after {
+      display: none;
+    }
+    &:hover {
+      background: lighten($blueGray, 5%);
+    }
+  }
+}
+
+.page_item {
+  position: relative;
+  border-right: 1px solid $white;
+   &:last-child {
+    border: none;
+  }
+}
+
+
+
+.nav-menu__items-sup {
+  padding: 5px 0;
+}
+
+.nav-menu__link-drop {
+  text-align: left;
+  padding: 10px 15px;
+}
+
+#nav-menu__button {
+  position: relative;
+  background-color: $apricot;
+  color: $white;
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+  text-transform: lowercase;
+  margin-bottom: 0;
+  padding: 5px;
+  border: none;
+  border-radius:  22.5px;
+  cursor: pointer;
+  @extend %transit;
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &::before {
+    border: .5px solid $white;
+    border-radius: inherit;
+    opacity: 0;
+    animation: impuls-button 5s infinite linear;
+    z-index: -1;
+  }
+  &::after {
+    border: 2px solid $white;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  &:focus, &:hover {
+    background-color: lighten($putty, 5%);
+    outline: none;
+  }
+}
+
+
+.fa-phone-volume {
+  margin-right: 5px;
+}
+
+//Button minmenu
+
+.button-minmenu {
+  display: none;
+  align-content: space-between;
+  border: 2px solid $white;
+  border-radius: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 38px;
+  height: 17px;
+  padding: 9px 4px;
+  cursor: pointer;
+  transition: background .3s ease-in;
+}
+
+.button-minmenu__line {
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+  transform-origin: center center;
+  transition: transform .3s ease-in-out;
+}
+
+.scrol-fix {
+  @extend %transit;
+  display: block;
+}
+
+// ********************************HEADER DESCRIPTION******************************
+
+
+.header-wrap-desc {
+  @extend %flx-sec-center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  position: relative;
+  z-index: 3;
+}
+
+.header-description {
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.header-description__title {
+  max-width: 1041px;
+  margin: 0 auto;
+}
+
+.header-description__excerpt {
+  color: $apricot;
+}
+//.header-description__subtitle {
+//  margin-top: 0;
+//  font-size: 70px;
+//}
+
+
+
+// **************************** HEADER SERVICES ******************************
+
+
+.header-services {
+  @extend %flx-sec;
+  text-align: center;
+  width: 500px;
+  justify-content: center;
+}
+
+.header-services__title {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.header-services__address {
+  @extend %font-t;
+  font-style: normal;
+}
+
+.header-services__button {
+  display: block;
+  background: $apricotAlfa;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+  color: $white;
+  border: 1px solid $putty;
+  border-radius: 22.5px;
+  width: 365px;
+  height: 45px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  &:hover {
+    background-color: lighten($apricotAlfa, 10%);
+  }
+  &:active {
+    background-color: darken(teal, 3%);
+    outline: none;
+  }
+}
+
+.act {
+  background: $apricot !important;
+}
+
+
+// ***************************** HEADER DOWN ***************************
+
+
+.header-down-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  @extend %flx-sec;
+  justify-content: center;
+  z-index: 3;
+}
+
+.down-link {
+  color: $white;
+  font-size: 62px;
+  text-align: center;
+  cursor: pointer;
+  &:hover .fa-angle-double-down{
+    color: $white;
+    animation: header-down2 1s linear infinite;
+  }
+}
+
+.fa-angle-double-down {
+  opacity: 0;
+  transform: translateY(-80%);
+  animation: header-down 2.5s ease-in-out infinite;
+}
+
+// ***********************************HEADER END***********************************

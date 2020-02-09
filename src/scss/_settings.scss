@@ -1,0 +1,53 @@
+@import 'fonts';
+//Value
+
+// Color
+$blueGray: rgba(111, 158, 218, 1);
+$apricot: #E99874;
+$apricotAlfa: rgba(233, 152, 116, .5);
+$putty: rgba(195, 169, 116, 1);
+$sharcoal: rgba(81, 81, 83, .9);
+$white: rgba(252, 252, 252, 1);
+$glitter: rgba(233, 239, 248, 1);
+$teal: rgba(0, 128, 128, 1);
+
+
+
+//Main fonts
+%font-r{ //Roboto
+  font: 18px Roboto, sans-serif;
+}
+%font-t{ //Tahoma
+  font: 16px Tahoma, sans-serif;
+}
+%font-sn{ //PT Sans Narrow
+  font: 18px 'PT Sans Narrow', sans-serif;
+}
+
+// Flex-box
+%flx-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flx-sec{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+%flx-sec-center{ 
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// Transform and transition
+
+%transit{
+  transition: all .2s linear;
+}
